@@ -6,7 +6,6 @@
 **Related**
 
  - [author-regex](https://github.com/jonschlinkert/author-regex)
- - [parse-author](https://github.com/jonschlinkert/parse-author)
  - [parse-authors](https://github.com/jonschlinkert/parse-authors)
 
 
