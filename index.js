@@ -12,8 +12,8 @@ var re = require('author-regex');
 module.exports = function(str) {
   var author = re().exec(str);
   return {
-    name: RegExp.$1,
-    email: RegExp.$2,
-    url: RegExp.$3
+    name: author[1] || '',
+    email: author[2] || '',
+    url: author[3] || ''
   };
 };
