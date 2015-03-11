@@ -14,22 +14,24 @@
   "bugs": {
     "url": "https://github.com/jonschlinkert/parse-author/issues"
   },
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "https://github.com/jonschlinkert/parse-author/blob/master/LICENSE-MIT"
-    }
+  "license": {
+    "type": "MIT",
+    "url": "https://github.com/jonschlinkert/parse-author/blob/master/LICENSE"
+  },
+  "files": [
+    "index.js"
   ],
   "main": "index.js",
   "engines": {
     "node": ">=0.10.0"
   },
   "scripts": {
-    "test": "mocha -R spec"
+    "test": "mocha"
+  },
+  "dependencies": {
+    "author-regex": "^0.2.1"
   },
   "devDependencies": {
-    "verb-tag-jscomments": ">= 0.2.0",
-    "verb": ">= 0.2.6",
     "should": "^4.0.4",
     "mocha": "*"
   },
@@ -50,8 +52,5 @@
     "regex",
     "regexp",
     "regular"
-  ],
-  "dependencies": {
-    "author-regex": "^0.2.1"
-  }
+  ]
 }

@@ -1,8 +1,8 @@
 /*!
  * parse-author <https://github.com/jonschlinkert/parse-author>
  *
- * Copyright (c) 2014 Jon Schlinkert, contributors.
- * Licensed under the MIT license.
+ * Copyright (c) 2014-2015, Jon Schlinkert.
+ * Licensed under the MIT License.
  */
 
 'use strict';
