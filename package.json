@@ -3,21 +3,12 @@
   "description": "Parse a string into an object with `name`, `email` and `url` properties following npm conventions. Useful for the `authors` property in package.json or for parsing an AUTHORS file into an array of authors objects.",
   "version": "0.2.0",
   "homepage": "https://github.com/jonschlinkert/parse-author",
-  "author": {
-    "name": "Jon Schlinkert",
-    "url": "https://github.com/jonschlinkert"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/jonschlinkert/parse-author.git"
-  },
+  "author": "Jon Schlinkert (https://github.com/jonschlinkert)",
+  "repository": "jonschlinkert/parse-author",
   "bugs": {
     "url": "https://github.com/jonschlinkert/parse-author/issues"
   },
-  "license": {
-    "type": "MIT",
-    "url": "https://github.com/jonschlinkert/parse-author/blob/master/LICENSE"
-  },
+  "license": "MIT",
   "files": [
     "index.js"
   ],
@@ -32,7 +23,7 @@
     "author-regex": "^0.2.1"
   },
   "devDependencies": {
-    "should": "^4.0.4",
+    "should": "*",
     "mocha": "*"
   },
   "keywords": [
@@ -52,5 +43,10 @@
     "regex",
     "regexp",
     "regular"
-  ]
+  ],
+  "verb": {
+    "related": {
+      "list": []
+    }
+  }
 }
