@@ -10,10 +10,16 @@
 var re = require('author-regex');
 
 module.exports = function(str) {
-  var author = re().exec(str);
+  str = emit(str).replace(/(\( *\)|< *>)?/g, '');
+  var author = re().exec(str) || {};
+
   return {
-    name: author[1] || '',
-    email: author[2] || '',
-    url: author[3] || ''
+    name: emit(author[1] || ''),
+    email: emit(author[2] || ''),
+    url: emit(author[3] || '')
   };
 };
+
+function emit(str) {
+  return (str == null ? '' : String(str)).trim();
+}
