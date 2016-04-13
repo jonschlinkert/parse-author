@@ -16,13 +16,9 @@ module.exports = function(str) {
   str = str.replace(/(\( *\)|< *>)?/g, '');
   var author = re().exec(str) || {};
 
-  return {
-    name: emit(author[1]),
-    email: emit(author[2]),
-    url: emit(author[3])
-  };
+  var obj = {};
+  if (author[1] && author[1].trim()) obj.name = author[1].trim();
+  if (author[2] && author[2].trim()) obj.email = author[2].trim();
+  if (author[3] && author[3].trim()) obj.url = author[3].trim();
+  return obj;
 };
-
-function emit(str) {
-  return (str == null ? '' : String(str)).trim();
-}
