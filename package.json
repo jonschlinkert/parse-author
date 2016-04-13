@@ -24,7 +24,7 @@
   },
   "devDependencies": {
     "gulp-format-md": "^0.1.7",
-    "mocha": "*"
+    "mocha": "^2.4.5"
   },
   "keywords": [
     "author",
@@ -46,20 +46,30 @@
     "somebody"
   ],
   "verb": {
-    "run": true,
-    "toc": false,
-    "layout": "default",
-    "tasks": [
-      "readme"
-    ],
     "plugins": [
       "gulp-format-md"
     ],
     "reflinks": [
       "verb"
     ],
+    "related": {
+      "list": [
+        "parse-authors",
+        "author-regex",
+        "stringify-author",
+        "stringify-authors"
+      ]
+    },
+    "toc": {
+      "render": false
+    },
+    "run": true,
+    "layout": "default",
     "lint": {
       "reflinks": true
-    }
+    },
+    "tasks": [
+      "readme"
+    ]
   }
 }
