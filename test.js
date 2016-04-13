@@ -21,11 +21,6 @@ describe('author:', function() {
     assert.deepEqual(author(fixture), {name: 'Jon Schlinkert', email: 'jon@foo.email', url: 'https://github.com/jonschlinkert'});
   });
 
-  it('should return an array of author objects.', function() {
-    var fixture = 'Jon Schlinkert <jon@foo.email> (https://github.com/jonschlinkert)';
-    assert.deepEqual(author(fixture), {name: 'Jon Schlinkert', email: 'jon@foo.email', url: 'https://github.com/jonschlinkert'});
-  });
-
   it('should return name and email only .', function() {
     var fixture = 'Jon Schlinkert (https://github.com/jonschlinkert)';
     assert.deepEqual(author(fixture), {name: 'Jon Schlinkert', email: '', url: 'https://github.com/jonschlinkert'});
@@ -55,11 +50,6 @@ describe('author:', function() {
   it('should return mixed properties.', function() {
     var fixture = '<jon@foo.email> (https://github.com/jonschlinkert)';
     assert.deepEqual(author(fixture), {name: '', email: 'jon@foo.email', url: 'https://github.com/jonschlinkert'});
-  });
-
-  it('should return mixed properties.', function() {
-    var fixture = '<jon@foo.email> ';
-    assert.deepEqual(author(fixture), {name: '', email: 'jon@foo.email', url: ''});
   });
 
   it('should return name only.', function() {
