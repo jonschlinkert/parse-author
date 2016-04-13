@@ -40,10 +40,9 @@ describe('author:', function() {
     );
   });
 
-  it('should return mixed properties', function() {
-    var fixture = 'Jon Schlinkert ';
+  it('should handle trailing whitespace', function() {
     assert.deepEqual(
-      author(fixture),
+      author('Jon Schlinkert '),
       {name: 'Jon Schlinkert', email: '', url: ''}
     );
   });
@@ -76,7 +75,7 @@ describe('author:', function() {
     assert.deepEqual(author('<> ()'), {name: '', email: '', url: ''});
   });
 
-  it('should return mixed properties', function() {
+  it('should handle missing name property', function() {
     var fixture = '<jon@foo.email> (https://github.com/jonschlinkert)';
     assert.deepEqual(
       author(fixture),
