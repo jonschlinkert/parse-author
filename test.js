@@ -79,6 +79,14 @@ describe('author:', function() {
     );
   });
 
+  it('should handle misordered properties', function() {
+    var fixture = '(https://github.com/jonschlinkert) <jon@foo.email>';
+    assert.deepEqual(
+      author(fixture),
+      {email: 'jon@foo.email', url: 'https://github.com/jonschlinkert'}
+    );
+  });
+
   it('should return name only', function() {
     assert.deepEqual(
       author('Jon Schlinkert'),
