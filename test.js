@@ -12,26 +12,21 @@ var assert = require('assert');
 var author = require('./');
 
 describe('author:', function() {
-  it('should return empty fields for missing properties.', function() {
+  it('should return empty fields for missing properties', function() {
     assert.deepEqual(author(''), {name: '', email: '', url: ''});
   });
 
-  it('should return a parsed author object.', function() {
+  it('should return a parsed author object', function() {
     var fixture = 'Jon Schlinkert <jon@foo.email> (https://github.com/jonschlinkert)';
     assert.deepEqual(author(fixture), {name: 'Jon Schlinkert', email: 'jon@foo.email', url: 'https://github.com/jonschlinkert'});
   });
 
-  it('should return an array of author objects.', function() {
-    var fixture = 'Jon Schlinkert <jon@foo.email> (https://github.com/jonschlinkert)';
-    assert.deepEqual(author(fixture), {name: 'Jon Schlinkert', email: 'jon@foo.email', url: 'https://github.com/jonschlinkert'});
-  });
-
-  it('should return name and email only .', function() {
+  it('should return name and email only', function() {
     var fixture = 'Jon Schlinkert (https://github.com/jonschlinkert)';
     assert.deepEqual(author(fixture), {name: 'Jon Schlinkert', email: '', url: 'https://github.com/jonschlinkert'});
   });
 
-  it('should return mixed properties.', function() {
+  it('should return mixed properties', function() {
     var fixture = 'Jon Schlinkert ';
     assert.deepEqual(author(fixture), {name: 'Jon Schlinkert', email: '', url: ''});
   });
@@ -52,26 +47,21 @@ describe('author:', function() {
     assert.deepEqual(author('<> ()'), {name: '', email: '', url: ''});
   });
 
-  it('should return mixed properties.', function() {
+  it('should return mixed properties', function() {
     var fixture = '<jon@foo.email> (https://github.com/jonschlinkert)';
     assert.deepEqual(author(fixture), {name: '', email: 'jon@foo.email', url: 'https://github.com/jonschlinkert'});
   });
 
-  it('should return mixed properties.', function() {
-    var fixture = '<jon@foo.email> ';
-    assert.deepEqual(author(fixture), {name: '', email: 'jon@foo.email', url: ''});
-  });
-
-  it('should return name only.', function() {
+  it('should return name only', function() {
     assert.deepEqual(author('Jon Schlinkert'), {name: 'Jon Schlinkert', email: '', url: ''});
   });
 
-  it('should return email only.', function() {
+  it('should return email only', function() {
     var fixture = '<jon@foo.email>';
     assert.deepEqual(author(fixture), {name: '', email: 'jon@foo.email', url: ''});
   });
 
-  it('should return url only.', function() {
+  it('should return url only', function() {
     var fixture = '(https://github.com/jonschlinkert)';
     assert.deepEqual(author(fixture), {name: '', email: '', url: 'https://github.com/jonschlinkert'});
   });

@@ -14,9 +14,9 @@ module.exports = function(str) {
   var author = re().exec(str) || {};
 
   return {
-    name: emit(author[1] || ''),
-    email: emit(author[2] || ''),
-    url: emit(author[3] || '')
+    name: emit(author[1]),
+    email: emit(author[2]),
+    url: emit(author[3])
   };
 };
 
