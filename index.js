@@ -10,7 +10,10 @@
 var re = require('author-regex');
 
 module.exports = function(str) {
-  str = emit(str).replace(/(\( *\)|< *>)?/g, '');
+  if (typeof str !== 'string') {
+    throw new TypeError('expected author to be a string');
+  }
+  str = str.replace(/(\( *\)|< *>)?/g, '');
   var author = re().exec(str) || {};
 
   return {
