@@ -23,10 +23,10 @@ Any of the properties can be used or missing:
 
 ```js
 authors('')
-//=> {name: '', email: '', url: ''}
+//=> {}
 
 authors('Jon Schlinkert (https://github.com/jonschlinkert)');
-//=> {name: 'Jon Schlinkert', email: '', url: 'https://github.com/jonschlinkert'}
+//=> {name: 'Jon Schlinkert', url: 'https://github.com/jonschlinkert'}
 ```
 
 ## Related projects
