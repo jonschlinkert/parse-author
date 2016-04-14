@@ -1,6 +1,6 @@
 # parse-author [![NPM version](https://img.shields.io/npm/v/parse-author.svg?style=flat)](https://www.npmjs.com/package/parse-author) [![NPM downloads](https://img.shields.io/npm/dm/parse-author.svg?style=flat)](https://npmjs.org/package/parse-author) [![Build Status](https://img.shields.io/travis/jonschlinkert/parse-author.svg?style=flat)](https://travis-ci.org/jonschlinkert/parse-author)
 
-> Parse a string into an object with `name`, `email` and `url` properties following npm conventions. Useful for the `authors` property in package.json or for parsing an AUTHORS file into an array of authors objects.
+Parse a string into an object with `name`, `email` and `url` properties following npm conventions. Useful for the `authors` property in package.json or for parsing an AUTHORS file into an array of authors objects.
 
 ## Install
 
