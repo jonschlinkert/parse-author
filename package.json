@@ -19,9 +19,6 @@
   "scripts": {
     "test": "mocha"
   },
-  "dependencies": {
-    "author-regex": "^0.2.1"
-  },
   "devDependencies": {
     "gulp-format-md": "^0.1.7",
     "mocha": "^2.4.5"

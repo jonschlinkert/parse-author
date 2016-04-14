@@ -7,19 +7,16 @@
 
 'use strict';
 
-var re = require('author-regex');
-
 module.exports = function(str) {
-  str = emit(str).replace(/(\( *\)|< *>)?/g, '');
-  var author = re().exec(str) || {};
-
-  return {
-    name: emit(author[1]),
-    email: emit(author[2]),
-    url: emit(author[3])
-  };
+  if (typeof str !== 'string') {
+    throw new TypeError('expected author to be a string');
+  }
+  var name = str.match(/^([^\(<]+)/);
+  var url = str.match(/\(([^\)]+)\)/);
+  var email = str.match(/<([^>]+)>/);
+  var obj = {};
+  if (name && name[1].trim()) obj.name = name[1].trim();
+  if (email && email[1].trim()) obj.email = email[1].trim();
+  if (url && url[1].trim()) obj.url = url[1].trim();
+  return obj;
 };
-
-function emit(str) {
-  return (str == null ? '' : String(str)).trim();
-}
