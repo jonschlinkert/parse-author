@@ -1,7 +1,7 @@
 {
   "name": "parse-author",
   "description": "Parse an author, contributor, maintainer or other 'person' string into an object with name, email and url properties following npm conventions.",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "homepage": "https://github.com/jonschlinkert/parse-author",
   "author": "Jon Schlinkert (https://github.com/jonschlinkert)",
   "contributors": [
@@ -33,10 +33,10 @@
   "keywords": [
     "author",
     "authors",
+    "contributor",
     "exec",
     "expression",
     "extract",
-    "contributor",
     "maintainer",
     "maintainers",
     "match",
